@@ -1,0 +1,2456 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Chetan Bhatiya - Accountant, Learner and Future Full Stack Developer"
+    >
+
+    <title>Chetan Bhatiya | My Journey 🚀</title>
+
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            color: #172033;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef2ff,
+                    #fdf2f8,
+                    #ecfeff
+                );
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+
+            transition: 0.4s ease;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================================
+           COLOR VARIABLES
+        ========================================= */
+
+        :root {
+
+            --purple: #7c3aed;
+            --blue: #2563eb;
+            --pink: #ec4899;
+            --cyan: #06b6d4;
+            --green: #10b981;
+            --orange: #f97316;
+
+            --dark: #172033;
+
+            --glass:
+                rgba(255,255,255,0.72);
+
+            --shadow:
+                0 20px 50px rgba(31,41,55,0.12);
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        nav {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 16px 7%;
+
+            background:
+                rgba(255,255,255,0.75);
+
+            backdrop-filter: blur(18px);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.5);
+
+            box-shadow:
+                0 5px 25px rgba(0,0,0,0.06);
+        }
+
+
+        .logo {
+
+            font-size: 25px;
+
+            font-weight: 900;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--purple),
+                    var(--pink),
+                    var(--orange)
+                );
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+
+        nav ul {
+
+            display: flex;
+
+            gap: 25px;
+
+            list-style: none;
+        }
+
+
+        nav a {
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            color: var(--purple);
+
+            transform: translateY(-2px);
+        }
+
+
+        #themeBtn {
+
+            border: none;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--purple),
+                    var(--pink)
+                );
+
+            color: white;
+
+            width: 42px;
+
+            height: 42px;
+
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+
+        #themeBtn:hover {
+
+            transform:
+                rotate(20deg)
+                scale(1.1);
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            min-height: 92vh;
+
+            padding: 80px 7%;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* Decorative circles */
+
+        .blob {
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(2px);
+
+            opacity: 0.55;
+
+            animation:
+                float 7s ease-in-out infinite;
+        }
+
+
+        .blob-one {
+
+            width: 280px;
+            height: 280px;
+
+            background: #c4b5fd;
+
+            top: 60px;
+            left: -100px;
+        }
+
+
+        .blob-two {
+
+            width: 250px;
+            height: 250px;
+
+            background: #f9a8d4;
+
+            right: -80px;
+            bottom: 40px;
+
+            animation-delay: 2s;
+        }
+
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+
+        .hero-container {
+
+            max-width: 1150px;
+
+            width: 100%;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr 0.8fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .badge {
+
+            display: inline-block;
+
+            padding: 8px 15px;
+
+            border-radius: 30px;
+
+            background:
+                rgba(124,58,237,0.1);
+
+            color: var(--purple);
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
+            border:
+                1px solid rgba(124,58,237,0.15);
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(42px, 6vw, 72px);
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+
+        .gradient-text {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--purple),
+                    var(--pink),
+                    var(--orange)
+                );
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+
+        .hero-description {
+
+            font-size: 19px;
+
+            color: #64748b;
+
+            max-width: 650px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .btn {
+
+            padding: 13px 22px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            border: none;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .btn-primary {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--purple),
+                    var(--pink)
+                );
+
+            box-shadow:
+                0 10px 25px
+                rgba(124,58,237,0.3);
+        }
+
+
+        .btn-secondary {
+
+            background: white;
+
+            border:
+                1px solid #e2e8f0;
+        }
+
+
+        .btn:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 15px 30px
+                rgba(0,0,0,0.12);
+        }
+
+
+        /* =========================================
+           AVATAR CARD
+        ========================================= */
+
+        .avatar-wrapper {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .avatar-card {
+
+            width: 320px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            background:
+                var(--glass);
+
+            backdrop-filter:
+                blur(20px);
+
+            border-radius: 35px;
+
+            box-shadow:
+                var(--shadow);
+
+            border:
+                1px solid rgba(255,255,255,0.8);
+
+            animation:
+                cardFloat 5s ease-in-out infinite;
+        }
+
+
+        @keyframes cardFloat {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+
+        .avatar {
+
+            width: 155px;
+
+            height: 155px;
+
+            margin:
+                0 auto 20px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 65px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8b5cf6,
+                    #ec4899,
+                    #f97316
+                );
+
+            box-shadow:
+                0 15px 40px
+                rgba(124,58,237,0.35);
+
+            border:
+                6px solid white;
+        }
+
+
+        .avatar-card h2 {
+
+            font-size: 25px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .avatar-card p {
+
+            color: #64748b;
+        }
+
+
+        .status {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 7px 14px;
+
+            border-radius: 20px;
+
+            background:
+                #dcfce7;
+
+            color:
+                #15803d;
+
+            font-size: 13px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           SECTIONS
+        ========================================= */
+
+        section {
+
+            padding:
+                90px 7%;
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            max-width: 700px;
+
+            margin:
+                0 auto 50px;
+        }
+
+
+        .section-title h2 {
+
+            font-size: 40px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .section-title p {
+
+            color: #64748b;
+        }
+
+
+        /* =========================================
+           JOURNEY CARDS
+        ========================================= */
+
+        .cards {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(230px, 1fr)
+                );
+
+            gap: 25px;
+        }
+
+
+        .card {
+
+            padding: 30px;
+
+            background:
+                rgba(255,255,255,0.8);
+
+            backdrop-filter:
+                blur(15px);
+
+            border-radius: 25px;
+
+            box-shadow:
+                var(--shadow);
+
+            border:
+                1px solid rgba(255,255,255,0.7);
+
+            transition:
+                0.35s ease;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 80px;
+
+            height: 80px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(124,58,237,0.08);
+
+            right: -20px;
+
+            top: -20px;
+        }
+
+
+        .card:hover {
+
+            transform:
+                translateY(-10px)
+                rotate(1deg);
+
+            box-shadow:
+                0 25px 50px
+                rgba(31,41,55,0.15);
+        }
+
+
+        .icon {
+
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .card h3 {
+
+            margin-bottom: 10px;
+
+            font-size: 21px;
+        }
+
+
+        .card p {
+
+            color: #64748b;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           CURRENT ROLE
+        ========================================= */
+
+        .current-role {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding: 45px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #4f46e5,
+                    #7c3aed,
+                    #ec4899
+                );
+
+            color: white;
+
+            box-shadow:
+                0 25px 50px
+                rgba(79,70,229,0.3);
+
+            display: grid;
+
+            grid-template-columns:
+                100px 1fr;
+
+            gap: 25px;
+
+            align-items: center;
+        }
+
+
+        .role-icon {
+
+            font-size: 65px;
+
+            text-align: center;
+        }
+
+
+        .current-role h2 {
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .current-role p {
+
+            opacity: 0.9;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================================
+           SKILLS
+        ========================================= */
+
+        .skills-container {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .skill-box {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,0.07);
+
+            transition: 0.3s;
+        }
+
+
+        .skill-box:hover {
+
+            transform:
+                translateY(-5px);
+        }
+
+
+        .skill-top {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            margin-bottom: 10px;
+
+            font-weight: bold;
+        }
+
+
+        .skill-icon {
+
+            font-size: 25px;
+        }
+
+
+        .progress {
+
+            height: 9px;
+
+            background:
+                #e5e7eb;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+
+        .progress-bar {
+
+            height: 100%;
+
+            width: 0;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--purple),
+                    var(--pink)
+                );
+
+            transition:
+                width 1.5s ease;
+        }
+
+
+        /* =========================================
+           LEARNING ROADMAP
+        ========================================= */
+
+        .timeline {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            position: relative;
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 20px;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 4px;
+
+            background:
+                linear-gradient(
+                    var(--purple),
+                    var(--pink),
+                    var(--orange)
+                );
+
+            border-radius: 20px;
+        }
+
+
+        .timeline-item {
+
+            position: relative;
+
+            padding-left: 65px;
+
+            margin-bottom: 40px;
+        }
+
+
+        .timeline-dot {
+
+            position: absolute;
+
+            left: 5px;
+
+            top: 5px;
+
+            width: 34px;
+
+            height: 34px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--purple),
+                    var(--pink)
+                );
+
+            border: 5px solid #eef2ff;
+
+            z-index: 2;
+        }
+
+
+        .timeline-content {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,0.07);
+        }
+
+
+        .timeline-content h3 {
+
+            margin-bottom: 7px;
+        }
+
+
+        .timeline-content p {
+
+            color: #64748b;
+        }
+
+
+        /* =========================================
+           PROFILE FORM
+        ========================================= */
+
+        .form-container {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 40px;
+
+            background:
+                rgba(255,255,255,0.85);
+
+            border-radius: 30px;
+
+            box-shadow:
+                var(--shadow);
+        }
+
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .form-group {
+
+            margin-bottom: 20px;
+        }
+
+
+        .full {
+
+            grid-column:
+                1 / -1;
+        }
+
+
+        label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-weight: bold;
+        }
+
+
+        input,
+        textarea {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border-radius: 12px;
+
+            border:
+                1px solid #dbe3ef;
+
+            outline: none;
+
+            font-size: 15px;
+
+            background: white;
+
+            transition: 0.3s;
+        }
+
+
+        input:focus,
+        textarea:focus {
+
+            border-color:
+                var(--purple);
+
+            box-shadow:
+                0 0 0 4px
+                rgba(124,58,237,0.1);
+        }
+
+
+        textarea {
+
+            resize: vertical;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            padding: 40px 20px;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #312e81,
+                    #581c87
+                );
+        }
+
+
+        footer h2 {
+
+            margin-bottom: 10px;
+        }
+
+
+        footer p {
+
+            opacity: 0.8;
+        }
+
+
+        .socials {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            margin-top: 20px;
+        }
+
+
+        .socials a {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                rgba(255,255,255,0.1);
+
+            border-radius: 50%;
+
+            transition: 0.3s;
+        }
+
+
+        .socials a:hover {
+
+            background:
+                rgba(255,255,255,0.25);
+
+            transform:
+                translateY(-5px);
+        }
+
+
+        /* =========================================
+           CONTACT SECTION
+        ========================================= */
+
+        .contact-section {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .contact-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .contact-card {
+            padding: 25px 18px;
+            text-align: center;
+            color: white;
+            border-radius: 22px;
+            background: rgba(255,255,255,0.10);
+            border: 1px solid rgba(255,255,255,0.16);
+            transition: 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.18);
+        }
+
+        .contact-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 6px;
+        }
+
+        .contact-card p {
+            font-size: 13px;
+            opacity: 0.8;
+            word-break: break-word;
+        }
+
+        .contact-buttons {
+            margin-top: 28px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 11px 18px;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            background: rgba(255,255,255,0.22);
+        }
+
+        @media(max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 500px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        body.dark {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #1e1b4b,
+                    #172033
+                );
+
+            color: #f8fafc;
+        }
+
+
+        body.dark nav {
+
+            background:
+                rgba(15,23,42,0.85);
+        }
+
+
+        body.dark .hero-description,
+        body.dark .section-title p,
+        body.dark .card p,
+        body.dark .timeline-content p {
+
+            color: #cbd5e1;
+        }
+
+
+        body.dark .card,
+        body.dark .skill-box,
+        body.dark .timeline-content,
+        body.dark .form-container {
+
+            background:
+                rgba(30,41,59,0.9);
+
+            color: white;
+        }
+
+
+        body.dark .avatar-card {
+
+            background:
+                rgba(30,41,59,0.8);
+        }
+
+
+        body.dark input,
+        body.dark textarea {
+
+            background:
+                #0f172a;
+
+            color: white;
+
+            border-color:
+                #475569;
+        }
+
+
+        body.dark .btn-secondary {
+
+            background:
+                #1e293b;
+
+            color: white;
+
+            border-color:
+                #475569;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media(max-width: 800px) {
+
+            nav ul {
+                display: none;
+            }
+
+
+            .hero-container {
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+
+            .hero-description {
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+
+            .hero-buttons {
+
+                justify-content: center;
+            }
+
+
+            .skills-container {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .form-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .current-role {
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+        }
+
+
+        @media(max-width: 500px) {
+
+            .avatar-card {
+
+                width: 100%;
+            }
+
+
+            .hero {
+
+                padding-top: 50px;
+            }
+
+
+            section {
+
+                padding:
+                    65px 5%;
+            }
+
+
+            .section-title h2 {
+
+                font-size: 32px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================= -->
+
+    <nav>
+
+        <div class="logo">
+            CB. 🚀
+        </div>
+
+
+        <ul>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#journey">Journey</a>
+            </li>
+
+            <li>
+                <a href="#profile">Profile</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+
+        <button id="themeBtn">
+            🌙
+        </button>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="hero">
+
+        <div class="blob blob-one"></div>
+
+        <div class="blob blob-two"></div>
+
+
+        <div class="hero-container">
+
+
+            <div>
+
+                <span class="badge">
+                    👋 Welcome to my world
+                </span>
+
+
+                <h1>
+
+                    Hi, I'm
+
+                    <span class="gradient-text">
+                        Chetan
+                    </span>
+
+                    👨‍💻
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    I'm currently working as an
+                    <strong>Accountant</strong>,
+                    while building my next chapter
+                    in technology.
+
+                    <br><br>
+
+                    My future goal is simple:
+
+                    <strong>
+                        become a Full Stack Developer 🚀
+                    </strong>
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#about"
+                        class="btn btn-primary"
+                    >
+                        Explore My Journey ✨
+                    </a>
+
+
+                    <a
+                        href="#skills"
+                        class="btn btn-secondary"
+                    >
+                        View Skills 💻
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AVATAR -->
+
+            <div class="avatar-wrapper">
+
+                <div class="avatar-card">
+
+                    <div class="avatar">
+                        👨‍💻
+                    </div>
+
+
+                    <h2>
+                        Chetan Bhatiya
+                    </h2>
+
+
+                    <p>
+                        Accountant → Future Full Stack Developer
+                    </p>
+
+
+                    <span class="status">
+                        🟢 Currently Learning
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================= -->
+
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>
+                My Story 📖
+            </h2>
+
+            <p>
+                Where I am today and where I want to go.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💼
+                </div>
+
+                <h3>
+                    My Current Work
+                </h3>
+
+                <p>
+
+                    I currently work as an
+                    <strong>Accountant</strong>,
+                    handling accounting,
+                    reporting, documentation
+                    and business-related processes.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    📊
+                </div>
+
+                <h3>
+                    Professional Skills
+                </h3>
+
+                <p>
+
+                    My experience includes
+                    Excel, MIS reporting,
+                    Tally Prime, GST,
+                    TDS, ITR support,
+                    reconciliation and
+                    financial reporting.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💻
+                </div>
+
+                <h3>
+                    New Direction
+                </h3>
+
+                <p>
+
+                    I'm actively learning
+                    modern web development
+                    and building the technical
+                    foundation required for
+                    a career in software.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Future Goal
+                </h3>
+
+                <p>
+
+                    My long-term goal is to
+                    become a capable
+                    <strong>Full Stack Developer</strong>
+                    and build useful,
+                    real-world applications.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CURRENT ROLE
+    ========================================= -->
+
+    <section>
+
+        <div class="current-role">
+
+            <div class="role-icon">
+                🧾
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Currently: Accountant 💼
+                </h2>
+
+                <p>
+
+                    Working with accounts,
+                    data, reports, documentation
+                    and business processes —
+                    while learning coding and
+                    preparing for my next career chapter.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SKILLS
+    ========================================= -->
+
+    <section id="skills">
+
+        <div class="section-title">
+
+            <h2>
+                My Skill Stack 🧰
+            </h2>
+
+            <p>
+                Skills I've developed and technologies
+                I'm currently learning.
+            </p>
+
+        </div>
+
+
+        <div class="skills-container">
+
+
+            <div class="skill-box">
+
+                <div class="skill-top">
+
+                    <span>
+                        📊 MS Excel
+                    </span>
+
+                    <span>
+                        Professional
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        data-width="90%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <div class="skill-top">
+
+                    <span>
+                        📈 MIS & Reporting
+                    </span>
+
+                    <span>
+                        Professional
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        data-width="88%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <div class="skill-top">
+
+                    <span>
+                        🧾 Tally Prime
+                    </span>
+
+                    <span>
+                        Professional
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        data-width="85%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <div class="skill-top">
+
+                    <span>
+                        🏦 Bank Reconciliation
+                    </span>
+
+                    <span>
+                        Experienced
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        data-width="82%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <div class="skill-top">
+
+                    <span>
+                        📑 GST / TDS / ITR
+                    </span>
+
+                    <span>
+                        Experienced
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        data-width="80%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <div class="skill-top">
+
+                    <span>
+                        📝 Documentation
+                    </span>
+
+                    <span>
+                        Experienced
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        data-width="85%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DEVELOPMENT SKILLS -->
+
+            <div class="skill-box">
+
+                <div class="skill-top">
+
+                    <span>
+                        🌐 HTML
+                    </span>
+
+                    <span>
+                        Learning
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        data-width="45%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <div class="skill-top">
+
+                    <span>
+                        🎨 CSS
+                    </span>
+
+                    <span>
+                        Learning
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        data-width="30%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <div class="skill-top">
+
+                    <span>
+                        ⚡ JavaScript
+                    </span>
+
+                    <span>
+                        Learning
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        data-width="15%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-box">
+
+                <div class="skill-top">
+
+                    <span>
+                        🐙 Git & GitHub
+                    </span>
+
+                    <span>
+                        Learning
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        data-width="10%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         DEVELOPMENT JOURNEY
+    ========================================= -->
+
+    <section id="journey">
+
+        <div class="section-title">
+
+            <h2>
+                My Developer Journey 🛣️
+            </h2>
+
+            <p>
+                One step at a time.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        🌱 Step 1 — HTML
+                    </h3>
+
+                    <p>
+                        Learn semantic HTML,
+                        forms, tables,
+                        accessibility and
+                        modern page structure.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        🎨 Step 2 — CSS
+                    </h3>
+
+                    <p>
+                        Master layouts,
+                        Flexbox, Grid,
+                        responsive design,
+                        animations and modern UI.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        ⚡ Step 3 — JavaScript
+                    </h3>
+
+                    <p>
+                        Learn programming fundamentals,
+                        DOM manipulation,
+                        events, APIs and
+                        asynchronous JavaScript.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        ⚛️ Step 4 — React
+                    </h3>
+
+                    <p>
+                        Build modern,
+                        component-based
+                        frontend applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        🟢 Step 5 — Backend
+                    </h3>
+
+                    <p>
+                        Learn Node.js,
+                        Express, databases,
+                        REST APIs and
+                        authentication.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        🚀 Final Goal — Full Stack Developer
+                    </h3>
+
+                    <p>
+                        Build complete real-world
+                        applications and become
+                        a professional Full Stack Developer.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PERSONAL PROFILE
+    ========================================= -->
+
+    <section id="profile">
+
+        <div class="section-title">
+
+            <h2>
+                My Profile 🧑‍💻
+            </h2>
+
+            <p>
+                A simple interactive profile form.
+            </p>
+
+        </div>
+
+
+        <div class="form-container">
+
+            <form id="profileForm">
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            👤 Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value="Chetan Bhatiya"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="location">
+                            📍 Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            value="Uttarakhand, India"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="education">
+                            🎓 Education
+                        </label>
+
+                        <input
+                            type="text"
+                            id="education"
+                            name="education"
+                            value="BA + MA Political Science"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="profession">
+                            💼 Current Profession
+                        </label>
+
+                        <input
+                            type="text"
+                            id="profession"
+                            name="profession"
+                            value="Accountant"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="goal">
+                            🚀 Future Goal
+                        </label>
+
+                        <input
+                            type="text"
+                            id="goal"
+                            name="goal"
+                            value="Become a Full Stack Developer"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="aboutMe">
+                            ✨ About Me
+                        </label>
+
+                        <textarea
+                            id="aboutMe"
+                            name="aboutMe"
+                            rows="6"
+                        >I am currently working as an Accountant and building my skills in web development. I am learning HTML, CSS, JavaScript and modern web technologies with the long-term goal of becoming a Full Stack Developer. I believe in continuous learning, practical projects and improving step by step.</textarea>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Profile 🚀
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONTACT + FOOTER
+    ========================================= -->
+
+    <footer id="contact" class="contact-section">
+
+        <div class="section-title" style="color:white;">
+            <h2>Let's Connect 🤝</h2>
+            <p style="color:rgba(255,255,255,0.8);">
+                Want to connect, collaborate or just say hello? 👋
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <a class="contact-card" href="mailto:chetanbhatiya3@gmail.com">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p>chetanbhatiya3@gmail.com</p>
+            </a>
+
+            <a class="contact-card" href="https://wa.me/918126719994" target="_blank" rel="noopener">
+                <div class="contact-icon">💬</div>
+                <h3>WhatsApp</h3>
+                <p>+91 81267 19994</p>
+            </a>
+
+            <a class="contact-card" href="https://www.linkedin.com/in/chetan-bhatiya-72a6a1225" target="_blank" rel="noopener">
+                <div class="contact-icon">💼</div>
+                <h3>LinkedIn</h3>
+                <p>Connect with me</p>
+            </a>
+
+            <a class="contact-card" href="https://www.instagram.com/chetan__bhatiya" target="_blank" rel="noopener">
+                <div class="contact-icon">📸</div>
+                <h3>Instagram</h3>
+                <p>@chetan__bhatiya</p>
+            </a>
+
+            <a class="contact-card" href="https://www.facebook.com/chetan.bhatiya.148" target="_blank" rel="noopener">
+                <div class="contact-icon">👥</div>
+                <h3>Facebook</h3>
+                <p>Find me on Facebook</p>
+            </a>
+
+        </div>
+
+        <div class="contact-buttons">
+
+            <a class="contact-btn" href="mailto:chetanbhatiya3@gmail.com">
+                📧 Email Me
+            </a>
+
+            <a class="contact-btn" href="https://wa.me/918126719994" target="_blank" rel="noopener">
+                💬 WhatsApp
+            </a>
+
+            <a class="contact-btn" href="https://www.linkedin.com/in/chetan-bhatiya-72a6a1225" target="_blank" rel="noopener">
+                💼 LinkedIn
+            </a>
+
+        </div>
+
+        <br>
+
+        <p>
+            © 2026 Chetan Bhatiya • Accountant → Full Stack Developer 🚀
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        const themeBtn =
+            document.getElementById("themeBtn");
+
+
+        themeBtn.addEventListener(
+            "click",
+            function () {
+
+                document.body.classList.toggle("dark");
+
+
+                if (
+                    document.body.classList.contains("dark")
+                ) {
+
+                    themeBtn.textContent = "☀️";
+
+                } else {
+
+                    themeBtn.textContent = "🌙";
+
+                }
+
+            }
+        );
+
+
+
+        /* =========================================
+           SKILL BAR ANIMATION
+        ========================================= */
+
+        const progressBars =
+            document.querySelectorAll(
+                ".progress-bar"
+            );
+
+
+        window.addEventListener(
+            "load",
+            function () {
+
+                progressBars.forEach(
+                    function (bar) {
+
+                        bar.style.width =
+                            bar.dataset.width;
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        /* =========================================
+           FORM SUBMIT
+        ========================================= */
+
+        const form =
+            document.getElementById(
+                "profileForm"
+            );
+
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                alert(
+                    "Profile saved successfully! 🚀"
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
+
+```
